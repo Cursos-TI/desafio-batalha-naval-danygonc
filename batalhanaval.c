@@ -11,21 +11,33 @@ int tabuleiro [10][10];
         }    
     }
 
-    int horizontal[3] = {3, 3, 3};
-    int vertical[3] = {3, 3, 3};
+    int navio[3] = {3, 3, 3};
 
 // navio horizontal
 int linhaNH = 5;
 int colunaNH = 2;
 for (int i = 0; i < 3; i++){
-tabuleiro [linhaNH][colunaNH + i] = horizontal [i];
+tabuleiro [linhaNH][colunaNH + i] = navio [i];
 }
 //navio vertical
 
 int linhaNV = 2;
 int colunaNV = 5;
 for (int i= 0; i < 3; i++){
-tabuleiro [linhaNV + i][colunaNV] = vertical [i];
+tabuleiro [linhaNV + i][colunaNV] = navio [i];
+}
+
+//navio diagonal 1
+int linhaND1 = 1;
+int colunaND1 = 1;
+for (int i= 0; i < 3; i++){
+tabuleiro [linhaND1 + i][colunaND1] = navio [i];
+}
+//navio diagonal 2
+int linhaND2 = 7;
+int colunaND2 = 2;
+for (int i= 0; i < 3; i++){
+tabuleiro [linhaND2 - i][colunaND2 + i] = navio [i];
 }
 
 printf("  ");
